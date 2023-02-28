@@ -1,5 +1,4 @@
 package com.example.javaseleniumtest;
-import com.codeborne.selenide.impl.Screenshot;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;

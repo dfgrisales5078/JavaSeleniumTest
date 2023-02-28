@@ -1,7 +1,6 @@
 package com.example.javaseleniumtest;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.safari.SafariDriver;
@@ -10,11 +9,9 @@ import org.openqa.selenium.safari.SafariDriver;
 public class Google {
 
     public static void main(String[] args) throws InterruptedException {
-
         OpenGoogleWithChrome();
         OpenGoogleWithFirefox();
         OpenGoogleWithSafari();
-
     }
 
     private static void OpenGoogleWithChrome() throws InterruptedException {
@@ -31,7 +28,7 @@ public class Google {
         WebDriver firefoxDriver = new FirefoxDriver();
         firefoxDriver.get("https://www.google.com");
         firefoxDriver.manage().window().maximize();
-        Thread.sleep(6000);
+        Thread.sleep(4000);
         firefoxDriver.close();
     }
 
@@ -40,7 +37,7 @@ public class Google {
         WebDriver safariDriver = new SafariDriver();
         safariDriver.get("https://www.google.com");
         safariDriver.manage().window().maximize();
-        Thread.sleep(6000);
+        Thread.sleep(4000);
         safariDriver.close();
     }
 }
