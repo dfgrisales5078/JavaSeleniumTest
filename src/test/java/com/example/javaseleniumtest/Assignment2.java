@@ -55,19 +55,6 @@ public class Assignment2 {
         Select fav_ui_automation_tool_dropdown = new Select(chromeDriver.findElement(By.className("ui-selectonemenu")));
         fav_ui_automation_tool_dropdown.selectByVisibleText("Selenium");
 
-        // -------------- Get the title and current url of the selected webpage --------------
-        System.out.println(chromeDriver.getTitle());
-        String current_url = chromeDriver.getCurrentUrl();
-        System.out.println(current_url);
-
-        // ---------- List the size and display the number of Web Elements present in the current Webpage. -----------
-        List<WebElement> all_elements = chromeDriver.findElements(By.tagName("a"));
-        System.out.println(all_elements.size());
-
-        for (WebElement element : all_elements) {
-            System.out.println("element: " + element);
-        }
-
         // -------------- Drag and Drop ----------------
         chromeDriver.get("https://demoqa.com/droppable");
         Thread.sleep(4000);
@@ -76,6 +63,20 @@ public class Assignment2 {
         WebElement drop = chromeDriver.findElement(By.id("droppable"));
         action.dragAndDrop(drag, drop).build().perform();
         Thread.sleep(4000);
+
+        // -------------- Get the title and current url of the selected webpage --------------
+        System.out.println(chromeDriver.getTitle());
+        String current_url = chromeDriver.getCurrentUrl();
+        System.out.println(current_url);
+
+        // ---------- List the size and display the number of Web Elements present in the current Webpage. -----------
+        chromeDriver.get("https://www.amazon.com/");
+        List<WebElement> all_elements = chromeDriver.findElements(By.tagName("a"));
+        System.out.println("" + all_elements.size());
+
+        for (WebElement element : all_elements) {
+            System.out.println(element.getText());
+        }
 
         // --------------  Close the browser  --------------
         chromeDriver.close();
