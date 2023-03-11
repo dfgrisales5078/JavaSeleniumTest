@@ -63,10 +63,6 @@ public class Assignment2 {
             safariDriver.findElement(By.id("checkbox" + i)).click();
         }
 
-        // click on button using find by Name
-        safariDriver.findElement(By.id("Button1")).click();
-        Thread.sleep(4000);
-
         //--------------   Dropdown Menus  --------------
         safariDriver.get("https://leafground.com/select.xhtml;jsessionid=node017poao36bf3jpf8z96wy3hxk1135438.node0");
         Thread.sleep(4000);
