@@ -63,6 +63,7 @@ public class Assignment2 {
             safariDriver.findElement(By.id("checkbox" + i)).click();
         }
 
+        // click on button using find by Name
         safariDriver.findElement(By.id("Button1")).click();
         Thread.sleep(4000);
 
@@ -72,6 +73,9 @@ public class Assignment2 {
         Select fav_ui_automation_tool_dropdown = new Select(safariDriver.findElement(
                 By.className("ui-selectonemenu")));
         fav_ui_automation_tool_dropdown.selectByVisibleText("Selenium");
+        Thread.sleep(4000);
+
+        safariDriver.findElement(By.name("menuform")).click();
         Thread.sleep(4000);
 
         // -------------- Drag and Drop ----------------
@@ -90,12 +94,12 @@ public class Assignment2 {
         Thread.sleep(4000);
 
         // -------------- Get the title and current url of the selected webpage --------------
-        System.out.println(safariDriver.getTitle());
+        System.out.println("Current website title: " + safariDriver.getTitle());
         String current_url = safariDriver.getCurrentUrl();
-        System.out.println(current_url);
+        System.out.println("Current url: " +current_url);
 
         // ---------- List the size and display the number of Web Elements present in the current Webpage. -----------
-        safariDriver.get("https://www.amazon.com/");
+        safariDriver.get("https://www.google.com/");
         List<WebElement> all_elements = safariDriver.findElements(By.tagName("a"));
         System.out.println("Size of elements: " + all_elements.size() + "\n");
 
