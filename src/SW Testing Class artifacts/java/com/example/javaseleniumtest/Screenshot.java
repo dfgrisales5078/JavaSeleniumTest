@@ -21,5 +21,7 @@ public class Screenshot {
         File src = screenshot.getScreenshotAs(OutputType.FILE);
         File des = new File("/Users/dg/Library/CloudStorage/OneDrive-FloridaGulfCoastUniversity/FGCU/Spring 2023/Software Testing/InteliJ/JavaSeleniumTest/test.png");
         FileHandler.copy(src, des);
+
+        driver.close();
     }
 }
